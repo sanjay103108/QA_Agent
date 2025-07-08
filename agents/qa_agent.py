@@ -10,8 +10,8 @@ def run_agent_for_folder(folder_path, keywords):
     for filename, content in docs.items():
         context = extract_keyword_contexts(content, keywords)
         if context:
-            print(f"\n🔍 Evaluating {filename}...\n")
+            print(f"\nEvaluating {filename}...\n")
             result = evaluate_document_with_gemini(context)
             print(result)
         else:
-            print(f"\n⚠️ No relevant content found in {filename}")
+            print(f"\nNo relevant content found in {filename}")

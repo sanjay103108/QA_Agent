@@ -19,6 +19,7 @@ Based on the following extracted keyword-related content, evaluate whether the d
 4. Future scope or limitations
 
 For each, say if it's fully present, partially, or missing. Then give:
+- Grade each of them out of 1 and display it for each parameter
 - A score out of 4 (can be fractional)
 - Final status: Compliant / Mostly Compliant / Needs Improvement
 - Remarks for improvement
