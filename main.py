@@ -7,10 +7,30 @@ from tools.output_tools import (
     send_alert_email,
 )
 
+# TECH_KEYWORDS = [
+#     "problem statement", "architecture", "methodology",
+#     "experimental results", "accuracy", "future scope", "limitations"
+# ]
+
 TECH_KEYWORDS = [
-    "problem statement", "architecture", "methodology",
-    "experimental results", "accuracy", "future scope", "limitations"
+    "CRD update", "Go-Live date", "deployment timeline", "revised milestone",
+    "CSAT survey", "customer feedback", "survey project name", "client contact",
+    "EPS tool", "design justification", "EPS lifecycle", "field-level mapping",
+    "planning call", "design meeting", "status notes", "architecture review",
+    "post-deployment check", "QA validation", "cutover checklist", "EPS closure",
+    "closure email", "CAF", "SCN", "handoff complete",
+    "kick-off meeting", "project launch", "scope alignment",
+    "project plan", "Gantt chart", "milestone tracker", "high-level schedule",
+    "resource request", "Merlin", "staffing plan",
+    "risk log", "issue tracker", "escalation", "RAG status"
 ]
+
+# Is CRD updated and is in sync with milestone data
+# CSAT - Verify if survey Project Name and Customer Contact is updated
+# Check if Post Deployment checks have been completed
+# Check if closure communication has been sent to the customer
+# Verify if design was created using EPS tool
+# Check if Planning and Design call conducted, status sent and notes updated
 
 ALERT_EMAIL = "seshadri.mamatha@gmail.com"
 SENDER_EMAIL = "sanjay10.seshadri@gmail.com"
@@ -37,11 +57,11 @@ if __name__ == "__main__":
         if score < 2.5:
             send_alert_email(
                 to_email=ALERT_EMAIL,
-                subject=f"⚠️ QA Alert for {filename}",
+                subject=f" QA Alert for {filename}",
                 body=f"Score: {score}\nStatus: {status}\n\n{feedback}",
                 sender_email=SENDER_EMAIL,
                 sender_password=SENDER_PASSWORD
             )
 
     save_results_to_csv(results)
-    print("📤 All results saved to qa_results.csv")
+    print(" All results saved to qa_results.csv")

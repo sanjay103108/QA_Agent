@@ -28,7 +28,7 @@ def parse_score_and_status(feedback_text):
 
 def send_alert_email(to_email, subject, body, sender_email, sender_password):
     """
-    Sends a basic alert email via SMTP (Gmail recommended).
+    Sends a basic alert email via SMTP 
     """
     message = MIMEMultipart()
     message["From"] = sender_email
@@ -42,6 +42,6 @@ def send_alert_email(to_email, subject, body, sender_email, sender_password):
             server.starttls()
             server.login(sender_email, sender_password)
             server.send_message(message)
-            print(f"✅ Alert email sent to {to_email}")
+            print(f"Alert email sent to {to_email}")
     except Exception as e:
         print(f" Failed to send email: {e}")
