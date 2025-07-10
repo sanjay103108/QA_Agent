@@ -12,7 +12,7 @@ from tools.output_tools import (
 #     "experimental results", "accuracy", "future scope", "limitations"
 # ]
 
-TECH_KEYWORDS = [
+PM_KEYWORDS = [
     "CRD update", "Go-Live date", "deployment timeline", "revised milestone",
     "CSAT survey", "customer feedback", "survey project name", "client contact",
     "EPS tool", "design justification", "EPS lifecycle", "field-level mapping",
@@ -37,12 +37,12 @@ SENDER_EMAIL = "sanjay10.seshadri@gmail.com"
 SENDER_PASSWORD = "divt xebz zwhx ervs"
 
 if __name__ == "__main__":
-    docs = read_all_documents("Tech_docs")
+    docs = read_all_documents("PM_docs")
     results = []
 
     for filename, content in docs.items():
         print(f"\n Evaluating: {filename}")
-        context = extract_keyword_contexts(content, TECH_KEYWORDS)
+        context = extract_keyword_contexts(content, PM_KEYWORDS)
 
         if not context:
             print(" No relevant content found.")
