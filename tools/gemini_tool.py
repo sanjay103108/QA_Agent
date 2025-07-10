@@ -9,7 +9,7 @@ def evaluate_document_with_gemini(context_pairs):
     Accepts keyword-context tuples and returns Gemini's QA feedback.
     """
 
-    # ✅ Active prompt: Project Management QA (10-point checklist)
+    #  Active prompt: Project Management QA (10-point checklist)
     prompt = f"""
 You are a Project Management QA reviewer.
 
@@ -40,9 +40,9 @@ For each parameter:
 Then:
 - Return a **Total Score out of 9**
 - Provide a final **Compliance Status**:
-  - ✅ Compliant (score ≥ 8)
-  - 🟡 Mostly Compliant (5–7.5)
-  - ❌ Needs Improvement (below 5)
+  -  Compliant (score ≥ 8)
+  -  Mostly Compliant (5–7.5)
+  -  Needs Improvement (below 5)
 - Suggest 2–3 key improvement points if needed
 
 ---
@@ -59,7 +59,7 @@ Then:
 
 
 
-# 🧪 Old (commented out) prompt: Technical Document QA (4-point checklist)
+#  Old (commented out) prompt: Technical Document QA (4-point checklist)
 
 #     prompt = f"""
 # You are a QA reviewer for technical research documents.
