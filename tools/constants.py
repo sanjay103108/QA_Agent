@@ -1,6 +1,3 @@
-from tools.langgraph_qa import qa_graph
-import os
-
 PM_KEYWORDS = [
     "CRD update", "Go-Live date", "deployment timeline", "revised milestone",
     "CSAT survey", "customer feedback", "survey project name", "client contact",
@@ -14,16 +11,7 @@ PM_KEYWORDS = [
     "risk log", "issue tracker", "escalation", "RAG status"
 ]
 
-if __name__ == "__main__":
-    folder = "PM_docs"
-    if not os.path.exists(folder):
-        print(f"❌ Folder {folder} not found.")
-        exit()
-
-    result = qa_graph.invoke({
-        "folder": folder,
-        "keywords": PM_KEYWORDS,
-        "file_list": None  # If you want to evaluate everything
-    })
-
-    print("✅ QA Completed. Results saved to `qa_results.csv`")
+TECH_KEYWORDS = [
+    "problem statement", "architecture", "methodology",
+    "experimental results", "accuracy", "future scope", "limitations"
+]
